@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-DO App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>TO-DO</h1>
+    <div class="box">
+
+        <div class="error hide">
+            <div class="msg"> Please Enter The Complete Information of Your Task.</div>
+            <div class="btns"><button id="btn">TRY AGAIN</button></div>
+        </div>
+
+        <div class="TaskBtn part-1">
+            <button class="newTaskBtn">Create New Task</button>
+        </div>
+        <div class="newTask part-1 hide">
+            <div class="task-title same">
+                <h2 class="title">Title</h2>
+                <input type="text" placeholder="Enter Task Title" class="inp titleText">
+            </div>
+
+            <hr>
+
+            <div class="task-disc same">
+                <h2 class="disc">Discription</h2>
+                <textarea placeholder="Describe Your Task" class="inp diskText"></textarea>
+            </div>
+            <hr>
+            <div class="buttons same">
+                <button class="cancleBtn">Cancel</button>
+                <button class="saveBtn">Save</button>
+            </div>
+        </div>
+        <div class="part-2 hide">
+            <div class="tasks-container"></div>
+            <div class="clearBtnBox">
+                <button class="clearBtn">Clear All</button>
+            </div>
+        </div>
+
+        <div class="editTaskCard part-1 hide">
+            <h2>Edit Task</h2>
+            <h3 class="taskTitle">Learn JS</h3>
+            <div class="editableTaskPare">
+                <textarea class="editableTask"></textarea>
+                </div>
+
+                <div>
+                    <button class="editSave">Edit Task</button>
+                </div>
+            
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

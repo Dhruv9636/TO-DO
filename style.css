@@ -1,0 +1,572 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #526D82;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+h1,
+h2 {
+    color: #DDE6ED;
+    text-align: center;
+    width: 100%;
+}
+
+.box {
+    height: 95vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.part-1 {
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #27374D;
+    min-height: 150px;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.part-2 {
+    min-height: auto;
+    padding: 10px;
+    width: 98%;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 250px;
+    max-height: 400px;
+    overflow: auto;
+    scrollbar-width: none;
+    background-color: #27374D;
+}
+
+.tasks {
+    background-color: #526D82;
+    padding: 10px;
+    border-radius: 8px;
+    width: 30%;
+    overflow: auto;
+    margin: 10px 9px;
+    scrollbar-width: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 150px;
+    height: auto;
+}
+
+button {
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #526D82;
+    transition-duration: 0.4s;
+    color: #27374D;
+}
+
+button:active {
+    transition-duration: 0.4s;
+    transform: scale(0.85);
+}
+
+.same {
+    width: 30vw;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.inp {
+    border-radius: 8px;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.2);
+    outline: none;
+    transition-duration: 0.5s;
+    color: white;
+}
+
+.inp:focus {
+    box-shadow: 0px 4px 10px #526D82;
+    transition-duration: 0.5s
+}
+
+.inp::placeholder {
+    color: #27374D;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+hr {
+    color: white;
+    width: 80%;
+    margin: 30px 20px;
+}
+
+.saveTitle {
+    position: fix;
+    top: 10px;
+}
+
+.saveTask {
+    text-align: center;
+    width: 100%;
+}
+
+
+.markedBtn {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 20px;
+}
+
+
+
+
+.error {
+    height: 60vh;
+    width: 35vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px black;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+
+.msg {
+    font-size: 50px;
+    height: 65%;
+    font-family: arial;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #DDE6ED;
+}
+
+.btns {
+    width: 99%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btn {
+    width: 25%;
+    height: 40%;
+    font-size: 18px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.clearBtnBox {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.tasks-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 10px;
+    overflow: auto;
+    flex-wrap: wrap;
+}
+
+
+.sameBtn{
+    background-color: #27374D;
+    color: #526D82;
+}
+
+
+
+
+.taskTitle{
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
+.editableTask{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    font-size: 18px;
+    color: whitesmoke;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2px;
+    padding-top: 5px;
+}
+
+.editableTaskPare{
+    width: 100%;
+    height: 200px;
+    font-size: 18px;
+    color: #27374D;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+textarea::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+.hide {
+    display: none;
+}
+
+/* ===== COLOR THEME OVERRIDE ===== */
+
+body {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 40%, #0c1524 100%);
+}
+
+h1, h2 {
+    color: #e2e8f0;
+    text-shadow: 0 0 8px rgba(148, 163, 184, 0.2);
+}
+
+.part-1 {
+    background: linear-gradient(145deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.95));
+    border: 1px solid rgba(100, 116, 139, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.part-2 {
+    background: linear-gradient(145deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.95));
+    border: 1px solid rgba(100, 116, 139, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.tasks {
+    background: linear-gradient(145deg, rgba(51, 65, 85, 0.8), rgba(30, 41, 59, 0.8));
+    border: 1px solid rgba(100, 116, 139, 0.15);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+button {
+    background: linear-gradient(135deg, #0d9488, #0f766e);
+    color: #f0fdfa;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(13, 148, 136, 0.3);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #14b8a6, #0d9488);
+    box-shadow: 0 4px 15px rgba(13, 148, 136, 0.4);
+}
+
+.sameBtn {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.9));
+    color: #94a3b8;
+    border: 1px solid rgba(100, 116, 139, 0.2);
+}
+
+.sameBtn:hover {
+    color: #e2e8f0;
+    border-color: rgba(13, 148, 136, 0.5);
+    box-shadow: 0 2px 10px rgba(13, 148, 136, 0.2);
+}
+
+.inp {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #e2e8f0;
+    border: 1px solid rgba(100, 116, 139, 0.2);
+}
+
+.inp:focus {
+    box-shadow: 0px 4px 15px rgba(13, 148, 136, 0.3);
+    border-color: rgba(13, 148, 136, 0.5);
+}
+
+.inp::placeholder {
+    color: #64748b;
+}
+
+hr {
+    border-color: rgba(100, 116, 139, 0.2);
+}
+
+.saveTitle {
+    color: #e2e8f0;
+}
+
+.saveTask {
+    color: #94a3b8;
+}
+
+.taskTitle {
+    color: #e2e8f0;
+}
+
+.editableTask {
+    color: #e2e8f0;
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(100, 116, 139, 0.2);
+}
+
+.editableTaskPare {
+    color: #94a3b8;
+}
+
+.error {
+    background: linear-gradient(145deg, rgba(30, 41, 59, 0.98), rgba(15, 23, 42, 0.98));
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 20px rgba(239, 68, 68, 0.1);
+    backdrop-filter: blur(15px);
+}
+
+.msg {
+    color: #fca5a5;
+    text-shadow: 0 0 10px rgba(239, 68, 68, 0.3);
+}
+
+#btn {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    color: #fff;
+    box-shadow: 0 2px 10px rgba(239, 68, 68, 0.3);
+}
+
+#btn:hover {
+    background: linear-gradient(135deg, #f87171, #ef4444);
+    box-shadow: 0 4px 15px rgba(239, 68, 68, 0.4);
+}
+
+/* Mark animation - teal instead of green */
+@keyframes markPulse {
+    0%  { background-color: rgba(51, 65, 85, 0.8); border-color: rgba(100, 116, 139, 0.15); }
+    50% { background-color: rgba(13, 148, 136, 0.4); border-color: rgba(13, 148, 136, 0.5); }
+    100%{ background-color: rgba(13, 148, 136, 0.25); border-color: rgba(13, 148, 136, 0.4); box-shadow: 0 0 15px rgba(13, 148, 136, 0.2); }
+}
+
+/* =================== ANIMATIONS =================== */
+
+.anim-slide-in {
+    animation: slideIn 0.35s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(30px) scale(0.95); }
+    to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.anim-slide-out {
+    animation: slideOut 0.35s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes slideOut {
+    from { opacity: 1; transform: translateY(0) scale(1); }
+    to   { opacity: 0; transform: translateY(-30px) scale(0.95); }
+}
+
+.anim-pop-in {
+    animation: popIn 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes popIn {
+    0%  { opacity: 0; transform: scale(0.5); }
+    60% { opacity: 1; transform: scale(1.05); }
+    100%{ opacity: 1; transform: scale(1); }
+}
+
+.anim-pop-out {
+    animation: popOut 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes popOut {
+    from { opacity: 1; transform: scale(1); }
+    to   { opacity: 0; transform: scale(0.5); }
+}
+
+.anim-shake {
+    animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    15% { transform: translateX(-8px); }
+    30% { transform: translateX(8px); }
+    45% { transform: translateX(-6px); }
+    60% { transform: translateX(6px); }
+    75% { transform: translateX(-3px); }
+    90% { transform: translateX(3px); }
+}
+
+.anim-fade-in {
+    animation: fadeInUp 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.anim-fade-out {
+    animation: fadeOutDown 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes fadeOutDown {
+    from { opacity: 1; transform: translateY(0); }
+    to   { opacity: 0; transform: translateY(20px); }
+}
+
+@keyframes markPulse {
+    0%  { background-color: #526D82; }
+    50% { background-color: rgba(0, 180, 0, 0.5); }
+    100%{ background-color: green; }
+}
+
+.mark-anim {
+    animation: markPulse 0.6s ease forwards;
+}
+
+/* =================== RESPONSIVE =================== */
+
+@media (max-width: 768px) {
+    .box {
+        height: auto;
+        width: 100%;
+    }
+
+    .part-1 {
+        width: 60%;
+    }
+
+    .same {
+        width: 50vw;
+    }
+
+    .error {
+        width: 60vw;
+        height: 50vh;
+    }
+
+    .msg {
+        font-size: 36px;
+    }
+
+    .tasks {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .box {
+        height: auto;
+        width: 100%;
+    }
+
+    .part-1 {
+        width: 95%;
+    }
+
+    .same {
+        width: 90vw;
+    }
+
+    .inp {
+        width: 100%;
+    }
+
+    .error {
+        width: 90vw;
+        height: 50vh;
+    }
+
+    .msg {
+        font-size: 24px;
+        padding: 10px;
+    }
+
+    .tasks {
+        width: 95%;
+    }
+
+    .markedBtn {
+        margin: 5px 5px;
+    }
+
+    hr {
+        margin: 15px 10px;
+    }
+
+    .editableTaskPare {
+        height: 150px;
+    }
+}
+
+@media (max-width: 360px) {
+    .msg {
+        font-size: 20px;
+    }
+
+    .inp {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .editableTaskPare {
+        height: 120px;
+    }
+}
