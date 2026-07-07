@@ -6,7 +6,7 @@ A modern and responsive Currency Converter built with HTML, CSS, and JavaScript.
 
 ## 🚀 Live Demo
 
-https://dhruv9636.github.io/Currency-Converter/
+https://dhruv9636.github.io/currency-converter/
 
 ## ✨ Features
 
